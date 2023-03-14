@@ -28,19 +28,7 @@
 
 
 
- <div class="dropdown">
-  <button class="btn btn-outline-info dropdown-toggle" style="float: center; background-color: #3333cc;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    ///
-  </button>
-  <ul class="dropdown-menu">
-<li><a class="dropdown-item" href="https://addons.mozilla.org/en-US/firefox/addon/go-extension/" target="_blank">Get the Firefox extension.</a></li>
-<li><a class="dropdown-item" href="./download.html">Download the app</a></li>
-  <li><a class="dropdown-item" href="./addsearchtoyourwebsite.html">Add Search Box to your website</a></li>
-  <li><a class="dropdown-item" href="./donate.html">Make a donate for Resulti</a></li>
-  <li><a class="dropdown-item" href="./privacypolicy.html" >Privacy Policy </a></li>
-  <li><a class="dropdown-item" href="./about.html">About Resulti</a></li>
-  </ul>
-</div>
+
 <style>
   .dropdown {
   position: relative;
@@ -130,15 +118,23 @@ input[type="submit"] {
   width: 18%;
 }
 </style>
-<center>
-<form id="standard" method="get" action="/search.html">
-  <div id="animated-2" class="form-group">
-    <input type="text" class="form-control" name="q" maxlength="150" id="search-bar" placeholder="Search the web with Resulti...">
-  </div>
-  <input type="submit" value="Go!" class="btn btn-outline-info">
-</form>
 
-	<p style="font-family: 'LT Binary Neue Round', sans-serif;"><font color="white">First 6 900 visits !!! Thank you!</p>
+  <form method="get" action="/search.html"> 
+    <input type="text" name="q">
+    <button type="submit" style="font-family:'Inter Tight',sans-serif;">Go!
+ </form> 
+
+	 
+<form name="form" >
+<label for="form"><h5 style="font-family: 'LT Binary Neue', sans-serif;;"><font color="white">||| Menu</h5></label>
+<select size="1"  onChange="location = this.options[this.selectedIndex].value;">
+	<option value="" >Click me!</option>
+	<option value="https://addons.mozilla.org/fr/firefox/addon/go-extension/" >Get the Firefox extension!</option>
+	<option value="/addsearchtoyourwebsite.html" >Add Search to your Website</option>
+	<option value="./privacypolicy.html" >Privacy Policy</option>
+	<option value="/about.html" >About Go!</option>
+</select>
+</form>
            
  
 
@@ -185,13 +181,7 @@ input[type="submit"] {
       }
     }
   </style>
-	  <center>
- <p><ion-icon size="large" name="shield-half-outline"></ion-icon> No innapropriate/dangerous website</p>
-<p><ion-icon size="large" name="logo-google"></ion-icon>An Google Alertnative</p>
-<p><ion-icon size="large"name="bag-check-outline"></ion-icon>Private, No Tracking...</p> 
 
-
-	  </center>
  
 
 
