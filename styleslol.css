@@ -1,0 +1,22 @@
+body {
+background-color: rgb(27, 34, 44);;
+text-align:;
+}
+
+h1 {
+background-color: ;
+}
+
+h2 {
+background-color:;
+ }
+
+
+
+a:hover, a:active {
+  background-color: red;
+}
+
+h1 {
+  border-bottom:5px solid #0079FF;
+}
