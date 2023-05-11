@@ -29,4 +29,36 @@ alt="" title="Thanks you for using Resulti!" style="float:center-top;margin:0 10
 <script>
 javascript:(function(){adid=['adBlock','tadsb'];g=function(x){css=x.createElement('style');css.type='text/css';css.innerHTML='.gsc-adBlock,#adBlock,#tadsb,iframe[src*="doubleclick.net"]{display:none;}';x.body.appendChild(css);for(i=0;i<adid.length;i++){a=x.getElementById(adid[i]);if(a)a.parentElement.removeChild(a)}};f=function(s){g(s);ifrs=s.getElementsByTagName('iframe');if(ifrs){for(i=0;i<ifrs.length;i++){d=ifrs[i].contentWindow.document;f(d)}}};f(document)})();
 </script>
+
+<script>
+function getUrlParameter(sParam) {
+var sPageURL = window.location.search.substring(1);
+var sURLVariables = sPageURL.split('&');
+for (var i = 0; i < sURLVariables.length; i++) {
+var sParameterName = sURLVariables[i].split('=');
+if (sParameterName[0] == sParam) {
+return sParameterName[1];
+}
+}
+}
+var q = getUrlParameter('q');
+const qf = q.replaceAll('+', '%20');
+const qfc = decodeURIComponent(qf);
+document.getElementById('search-bar').value = qfc;
+window.addEventListener('popstate', function (event) {
+q = getUrlParameter('q');
+qf = q.replaceAll('+', '%20');
+qfc = decodeURIComponent(qf);
+document.getElementById('search-bar').value = qfc;
+});
+document.title = qfc + " - Resulti Lite Search";
+
+$(".search-txt-input").keydown(function (e) {
+if (e.keyCode == 13 && !e.shiftKey) {
+e.preventDefault();
+document.getElementById("standard").submit();
+return false;
+}
+});
+</script>
 </html>
